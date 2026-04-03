@@ -1,7 +1,7 @@
 # BrainVista Inference
 
 **BrainVista: Modeling Naturalistic Brain Dynamics as Multimodal Next-Token Prediction**
-(arXiv: 2602.04512)
+
 
 Long-horizon autoregressive rollout inference for fMRI encoding.
 

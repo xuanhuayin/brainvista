@@ -2,7 +2,7 @@
 set -euo pipefail
 
 # =============================================================================
-# BrainVista Inference (arXiv: 2602.04512)
+# BrainVista Inference
 # Long-horizon autoregressive rollout prediction
 #
 # Usage:

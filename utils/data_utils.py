@@ -1,5 +1,5 @@
 # utils/data_utils.py
-"""Data loading and temporal alignment utilities for BrainVista inference (arXiv: 2602.04512).
+"""Data loading and temporal alignment utilities for BrainVista inference.
 
 Handles stimulus-to-fMRI temporal alignment via mean-pooling within each fMRI time bin:
   tau_m^t = (1/kappa) * sum_{i=0}^{kappa-1} tau_m^{kappa*t + i}

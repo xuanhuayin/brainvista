@@ -2,7 +2,7 @@
 # inference.py
 """
 BrainVista: Modeling Naturalistic Brain Dynamics as Multimodal Next-Token Prediction
-(arXiv: 2602.04512)
+
 
 Long-horizon autoregressive rollout inference.
 
@@ -289,7 +289,7 @@ def run_inference(args):
 
 def parse_args():
     ap = argparse.ArgumentParser(
-        "BrainVista Inference: Long-horizon autoregressive rollout (arXiv: 2602.04512)"
+        "BrainVista Inference: Long-horizon autoregressive rollout"
     )
     ap.add_argument("--predictor_ckpt", required=True, help="Predictor checkpoint path")
     ap.add_argument("--video_root", required=True, help="V-JEPA 2 features root")

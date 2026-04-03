@@ -1,7 +1,7 @@
 # utils/models.py
 """
 BrainVista: Modeling Naturalistic Brain Dynamics as Multimodal Next-Token Prediction
-(arXiv: 2602.04512)
+
 
 Predictor model definitions:
   - Interleaved stimulus tokens (tau_s) and circuit tokens (tau_f)
@@ -69,7 +69,7 @@ class _SpatialMixerHead(nn.Module):
     interactions, then projects back. The K x K attention matrix provides
     interpretable network coupling patterns.
 
-    Reference: Section 3.4 of BrainVista (arXiv: 2602.04512)
+    Reference: Section 3.4 of BrainVista
     """
     def __init__(self, D_f: int, z_splits: list, d_z: int,
                  nhead: int = 4, nlayers: int = 1, dropout: float = 0.1):
@@ -126,7 +126,7 @@ class InterleavedSelfAttnPredictor(nn.Module):
 
     Architecture: Pre-LN Transformer, GELU, 4x FFN expansion, absolute position embeddings.
 
-    Reference: Section 3.2 of BrainVista (arXiv: 2602.04512)
+    Reference: Section 3.2 of BrainVista
     """
 
     def __init__(self, Dv: int, Da: int, Dw: int,
@@ -291,7 +291,7 @@ class InterleavedStim2BrainPredictor(InterleavedSelfAttnPredictor):
     future timesteps. This forces prediction solely from preceding stimulus
     context, preventing temporal leakage.
 
-    Reference: Section 3.3 of BrainVista (arXiv: 2602.04512)
+    Reference: Section 3.3 of BrainVista
     """
 
     def __init__(self, *args, **kwargs):
@@ -313,7 +313,7 @@ class InterleavedStim2BrainSpatialPredictor(InterleavedStim2BrainPredictor):
     Mixer Head splits D_f into K network components (K=7 Yeo functional
     networks), applies K x K multi-head self-attention, then maps back to D_f.
 
-    Reference: Section 3.4 of BrainVista (arXiv: 2602.04512)
+    Reference: Section 3.4 of BrainVista
     """
 
     def __init__(self, *args,
